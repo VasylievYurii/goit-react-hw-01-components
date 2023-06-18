@@ -1,22 +1,30 @@
 import PropTypes from 'prop-types';
 import { StatisticItem } from './StatisticItem';
+import { Section, StatsList, Title } from './Statistics.styled';
 
-export const Statistics = ({title, ...rest}) => {
+export const Statistics = ({ title, stats }) => {
   return (
-    <section className="statistics">
-  <h2 className="title">{title}</h2>
+    <Section>
+      <Title>{title}</Title>
 
-  <ul className="stat-list">
-   <StatisticItem stats={rest}/>
-  </ul>
-</section>
+      <StatsList>
+        {stats.map(({ id, label, percentage }) => {
+          return (
+            <StatisticItem key={id} label={label} percentage={percentage} />
+          );
+        })}
+      </StatsList>
+    </Section>
   );
 };
 
-// Profile.propTypes = {
-//     username: PropTypes.string.isRequired,
-//     tag: PropTypes.string.isRequired,
-//     location: PropTypes.string.isRequired,
-//     avatar: PropTypes.string.isRequired,
-//     stats: PropTypes.objectOf(PropTypes.number.isRequired)
-// };
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};

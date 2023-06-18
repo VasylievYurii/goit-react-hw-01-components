@@ -1,12 +1,11 @@
-export const StatisticItem = ({ stats }) => {
-    return (
-        stats['stats'].map(({ id, label, percentage }) => {
-        return (
-          <li className="item" key={id}>
-            <span className="label" key={id}>{label}</span>
-            <span className="percentage">{percentage}</span>
-          </li>
-        );
-      })
-    );
-  }
+import { ItemStat, Label, Percentage } from "./StatisticItem.styled"
+
+export const StatisticItem = ({ label, percentage }) => {
+    return ( 
+          <ItemStat>
+            <Label>{label}</Label>
+            <Percentage>{percentage}%</Percentage>
+          </ItemStat>
+       
+      )}
+    
