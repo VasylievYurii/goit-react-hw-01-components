@@ -1,8 +1,15 @@
 import styled from '@emotion/styled';
 
 export const Row = styled.tr`
+&:hover{
+  background-color: #ddfdfe;
+}
   &:nth-of-type(even) {
     background: #f8f8f8;
+
+    &:hover{
+      background-color: #ddfdfe;
+    }
   }
 `;
 export const Cell = styled.td`

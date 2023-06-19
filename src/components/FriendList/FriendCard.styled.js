@@ -34,7 +34,6 @@ export const Card = styled.li`
   }
 
   position: relative;
-  /* display: block; */
   overflow: hidden;
   &::before {
     content: '';
@@ -49,8 +48,6 @@ export const Card = styled.li`
   }
 `;
 
-
-
 export const StatusFriend = styled.span`
   /* background-color: ${setStatusColor};
   width: 20px;
@@ -58,25 +55,10 @@ export const StatusFriend = styled.span`
   border-radius: 50%; */
 `;
 
-export const AvatarFriend = styled.img`
-
-`;
+export const AvatarFriend = styled.img``;
 export const NameFriend = styled.p`
 font-size: 1.4em;
 padding-left: 0.5em;
 `;
 
-export const Wrapper = styled.div`
-  /* position: relative;
-  display: block;
-  overflow: hidden;
-  &::before {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 80px;
-    height: 80px;
-    background-color: green;
-    border-radius: 50%;
-  } */
-`;
+
