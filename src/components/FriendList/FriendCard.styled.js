@@ -1,11 +1,13 @@
 import styled from '@emotion/styled';
 
+const setStatusColor = ({ eventType }) => (eventType ? '#8ac926' : '#ff595e');
+
 export const Card = styled.li`
-display: flex;
+  display: flex;
   gap: 1.5em;
   margin: 0 auto;
   box-sizing: border-box;
-  min-width: 260px;
+  min-width: 200px;
   padding: 1em;
 
   background: rgba(217, 217, 217, 0.58);
@@ -17,7 +19,7 @@ display: flex;
 
   text-align: center;
   align-items: center;
-  justify-content: space-around;
+  justify-content: start;
   user-select: none;
   font-weight: bolder;
   color: #333;
@@ -30,28 +32,51 @@ display: flex;
   &:active {
     transform: scale(0.95) rotateZ(1.7deg);
   }
+
+  position: relative;
+  /* display: block; */
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 130px;
+    height: 130px;
+    background-color: ${setStatusColor};
+    border-radius: 50%;
+    left: -25%;
+    z-index: -1;
+  }
 `;
 
-const setStatusColor = ({eventType}) => eventType ? 'green' : 'red';
+
 
 export const StatusFriend = styled.span`
-background-color: ${setStatusColor};
-width: 20px;
-height: 20px;
-border-radius: 50%;
+  /* background-color: ${setStatusColor};
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; */
 `;
 
 export const AvatarFriend = styled.img`
-position: relative;
-display: block;
-&::before{
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-color: green;
-  z-index: 1000;
-}
+
 `;
-export const NameFriend = styled.p``;
+export const NameFriend = styled.p`
+font-size: 1.4em;
+padding-left: 0.5em;
+`;
+
+export const Wrapper = styled.div`
+  /* position: relative;
+  display: block;
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-color: green;
+    border-radius: 50%;
+  } */
+`;
