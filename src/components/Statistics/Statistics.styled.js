@@ -5,17 +5,12 @@ export const Section = styled.section`
   flex-direction: column;
   gap: 1.5em;
   margin: 0 auto;
-  margin-top: 1em;
-  padding-top: 1em;
   box-sizing: border-box;
-  /* width: 300px; */
-  /* height: 320px; */
 
   background: rgba(217, 217, 217, 0.58);
   border: 1px solid white;
   box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(6px);
-  /* border-radius: 5px; */
   transition: all 0.5s;
 
   text-align: center;
@@ -27,6 +22,7 @@ export const Section = styled.section`
 `;
 
 export const Title = styled.h2`
+  padding-top: 1em;
   color: #333;
   text-transform: uppercase;
 `;

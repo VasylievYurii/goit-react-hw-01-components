@@ -5,8 +5,7 @@ import { Section, StatsList, Title } from './Statistics.styled';
 export const Statistics = ({ title, stats }) => {
   return (
     <Section>
-      <Title>{title}</Title>
-
+      { title ? <Title>{title}</Title> : null}
       <StatsList>
         {stats.map(({ id, label, percentage }) => {
           return (

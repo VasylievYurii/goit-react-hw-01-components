@@ -5,7 +5,7 @@ export const CardProfile = styled.div`
   flex-direction: column;
   gap: 1.5em;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 1.5em;
   box-sizing: border-box;
   width: 260px;
   height: 320px;
@@ -14,7 +14,7 @@ export const CardProfile = styled.div`
   border: 1px solid white;
   box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(6px);
-  border-radius: 17px;
+  border-radius: 10px;
   transition: all 0.5s;
 
   text-align: center;
