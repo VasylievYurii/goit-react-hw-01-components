@@ -48,14 +48,8 @@ export const Card = styled.li`
   }
 `;
 
-export const StatusFriend = styled.span`
-  /* background-color: ${setStatusColor};
-  width: 20px;
-  height: 20px;
-  border-radius: 50%; */
-`;
-
 export const AvatarFriend = styled.img``;
+
 export const NameFriend = styled.p`
 font-size: 1.4em;
 padding-left: 0.5em;

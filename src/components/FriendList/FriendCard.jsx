@@ -1,4 +1,4 @@
-import { Card,StatusFriend,AvatarFriend,NameFriend } from "./FriendCard.styled";
+import { Card, AvatarFriend, NameFriend } from "./FriendCard.styled";
 
 export const FriendCard = ({ avatar, name, isOnline }) => {
     return (
